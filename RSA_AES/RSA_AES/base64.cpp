@@ -1,10 +1,12 @@
 #include "base64.h"
 
-char* base64Encode(const unsigned char *message, const size_t length) {
+char* base64Encode(const unsigned char *message, const size_t length)
+{
   int encodedSize = (int)(4 * ceil((double)length / 3));
   char *b64text = (char*)malloc(encodedSize + 1);
 
-  if(b64text == NULL) {
+  if(b64text == NULL)
+  {
     fprintf(stderr, "Failed to allocate memory\n");
     exit(1);
   }
@@ -28,7 +30,8 @@ char* base64Encode(const unsigned char *message, const size_t length) {
   return b64text;
 }
 
-int base64Decode(const char *b64message, const size_t length, unsigned char **buffer) {
+int base64Decode(const char *b64message, const size_t length, unsigned char **buffer)
+{
   int decodedLength = calcDecodeLength(b64message, length);
   *buffer = (unsigned char*)malloc(decodedLength + 1);
 
@@ -50,7 +53,8 @@ int base64Decode(const char *b64message, const size_t length, unsigned char **bu
   return decodedLength;
 }
 
-int calcDecodeLength(const char *b64input, const size_t length) {
+int calcDecodeLength(const char *b64input, const size_t length)
+{
   unsigned int padding = 0;
 
   // Check for trailing '=''s as padding

@@ -14,9 +14,6 @@
     <ClCompile Include="crypto_example.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="crypto_file_example.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="base64.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -32,9 +29,6 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="crypto_example.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="crypto_file_example.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
